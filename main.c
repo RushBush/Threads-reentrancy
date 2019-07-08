@@ -13,7 +13,7 @@ void key_create()
 }
 char *getErr(int errCode)
 {
-    char *str=malloc(15*sizeof(char));
+    char *str;
 
     pthread_once(&once,key_create);
     str=pthread_getspecific(key);
